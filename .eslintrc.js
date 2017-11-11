@@ -66,6 +66,7 @@ module.exports = {
             "single"
         ],
         "no-plusplus": "off",
+        "no-eval": "off",
         "object-shorthand": "off"
     }
 }

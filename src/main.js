@@ -6,6 +6,20 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// Injected function to resolve easter eggs
+window.binaryToString = (input) => // eslint-disable-line no-unused-vars
+{
+    const tokens = input.split(/\s/)
+    const answer = []
+
+    for (let i = 0; i < tokens.length; i++)
+    {
+        answer.push(String.fromCharCode(parseInt(tokens[i], 2)))
+    }
+
+    return answer.join('')
+}
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
